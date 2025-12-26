@@ -10,17 +10,20 @@ requires-python = ">=3.13"
 dependencies = []
 
 [build-system]
-requires = ["setuptools>=80", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+[tool.hatch.build.targets.wheel]
+packages = ["src/just_fix_windows_console"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.hatch.build.targets.wheel.force-include]
+"src/just_fix_windows_console_autofix.pth" = "just_fix_windows_console_autofix.pth"
 
-[tool.setuptools.package-data]
-just_fix_windows_console = ["py.typed"]
-
-[tool.setuptools.data-files]
-"" = ["src/just_fix_windows_console_autofix.pth"]
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src/just_fix_windows_console/**",
+  "/src/just_fix_windows_console_autofix.pth",
+  "/README.md",
+  "/LICENSE",
+  "/pyproject.toml",
+]

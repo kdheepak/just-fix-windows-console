@@ -1,1 +1,1 @@
-import importlib.util; spec = importlib.util.find_spec("just_fix_windows_console"); spec and __import__("just_fix_windows_console")
+import just_fix_windows_console
