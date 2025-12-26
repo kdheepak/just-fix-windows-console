@@ -1,1 +1,4 @@
-import just_fix_windows_console
+try:
+    import just_fix_windows_console
+except Exception:
+    ...
