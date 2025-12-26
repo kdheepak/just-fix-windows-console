@@ -1,6 +1,6 @@
 [project]
 name = "just-fix-windows-console"
-version = "0.2.0"
+version = "0.2.1"
 description = "A tiny, dependency-free Python module that enables ANSI / VT escape sequence processing on Windows consoles."
 readme = "README.md"
 authors = [
