@@ -1,6 +1,6 @@
 # `just_fix_windows_console`
 
-A tiny, dependency-free Python module that does one thing and one thing only --- enables ANSI / VT escape sequence processing on Windows consoles.
+A tiny, dependency-free Python module that does one thing and one thing only - enables ANSI / VT escape sequence processing on Windows consoles.
 
 ### Usage
 
