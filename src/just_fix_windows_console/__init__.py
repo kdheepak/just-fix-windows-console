@@ -88,3 +88,10 @@ def just_fix_windows_console() -> VTStatus:
         "stdout": _enable_vt_on_std_handle(STD_OUTPUT_HANDLE),
         "stderr": _enable_vt_on_std_handle(STD_ERROR_HANDLE),
     }
+
+
+# Enable VT processing as soon as the module is imported
+try:
+    VT_STATUS = just_fix_windows_console()
+except Exception:
+    VT_STATUS = {"stdout": False, "stderr": False}

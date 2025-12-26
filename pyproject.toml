@@ -10,5 +10,17 @@ requires-python = ">=3.13"
 dependencies = []
 
 [build-system]
-requires = ["uv_build>=0.9.17,<0.10.0"]
-build-backend = "uv_build"
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+just_fix_windows_console = ["py.typed"]
+
+[tool.setuptools.data-files]
+"" = ["src/just_fix_windows_console_autofix.pth"]
